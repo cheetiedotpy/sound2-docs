@@ -1,0 +1,44 @@
+site_name: Sound2 Documentation
+theme:
+  name: material
+  language: en
+  palette: 
+
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+  plugins:
+  - search
+markdown_extensions:
+- attr_list
+- admonition
+- md_in_html
+- pymdownx.details
+- pymdownx.highlight
+- pymdownx.superfences
+- pymdownx.critic
+- pymdownx.caret
+- pymdownx.keys
+- pymdownx.mark
+- pymdownx.tilde
+- pymdownx.emoji:
+    emoji_index: !!python/name:materialx.emoji.twemoji
+    emoji_generator: !!python/name:materialx.emoji.to_svg
+nav:
+- Home: index.md
+- Tutorial:
+  - Downloading & Installing: tutorial/download.md
+  - Basic Usage: tutorial/basicusage.md
+  - Priorities: tutorial/priorities.md
+  - Smoothing It Out: tutorial/smoothing.md
+  - Callbacks: tutorial/callbacks.md
+  - Sounds Dictionary: tutorial/soundsdict.md
+- API: api.md
