@@ -1,9 +1,48 @@
+## Types
+### Sound2Properties
+```lua
+type Sound2Properties = {
+	SoundId: string,
+	Priority: number,
+	VolumeChangeType: number,
+	VolumeChangeTime: number,
+	Volume: number,
+	MuteOthers: boolean,
+	StartDelay: number,
+	MutedVolume: number,
+	Parent: Instance,
+}
+```
+### SoundProperties
+```lua
+type SoundProperties = {
+	Archivable: boolean;
+	Name: string;
+	Parent: Instance;
+	PlayOnRemove: boolean;
+	RollOffMaxDistance: number;
+	RollOffMinDistance: number;
+	RollOffMode: Enum.RollOffMode;
+	Looped: boolean;
+	PlaybackRegionsEnabled: boolean;
+	PlaybackSpeed: number;
+	Playing: boolean;
+	TimePosition: number;
+	SoundGroup: SoundGroup;
+}
+```
+
 ## Sound2 Module
 ### Sound2.VolumeChangeType
 ```lua
 Sound2.VolumeChangeType = {Smooth = 1, Instant = 2}
 ```
 A Table that represents VolumeChangeType Enum.
+### Sound2.new()
+```lua
+Sound2.new(ObjectProps : Sound2Properties, RobloxProps : SoundProperties) => Sound2
+```
+Constructs the Sound2 Instance.
 ### Sound2.GetGlobalConfig()
 ```lua
 Sound2.GetGlobalConfig() => {} : GlobalConfig
@@ -21,7 +60,6 @@ Sets the current global config.
 Sound2.GetAllPlayingSounds() => {Sound2}
 ```
 Returns a table with all the currently playing `Sound2` Instances.
-## Sound2 Instance
 ### Sound2:Play()
 ```lua
 Sound2:Play() => void

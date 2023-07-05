@@ -41,4 +41,5 @@ nav:
   - Smoothing It Out: tutorial/smoothing.md
   - Callbacks: tutorial/callbacks.md
   - Sounds Dictionary: tutorial/soundsdict.md
+  - Muted Volume: tutorial/mutedvolume.md
 - API: api.md
