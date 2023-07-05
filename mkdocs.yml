@@ -35,7 +35,7 @@ markdown_extensions:
 nav:
 - Home: index.md
 - Tutorial:
-  - Downloading & Installing: tutorial/download.md
+  - Installation: tutorial/download.md
   - Basic Usage: tutorial/basicusage.md
   - Priorities: tutorial/priorities.md
   - Smoothing It Out: tutorial/smoothing.md
