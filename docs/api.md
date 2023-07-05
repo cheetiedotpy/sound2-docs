@@ -20,30 +20,30 @@ Sets the current global config.
 ```lua
 Sound2.GetAllPlayingSounds() => {Sound2}
 ```
-Returns a table with all the currently playing `Sound2` Objects.
-## Sound2 Object
+Returns a table with all the currently playing `Sound2` Instances.
+## Sound2 Instance
 ### Sound2:Play()
 ```lua
 Sound2:Play() => void
 ```
-Plays the current `Sound2` Object. Will not stop automatically if `Roblox Instance` is `.Looped`
+Plays the current `Sound2` Instance. Will not stop automatically if `Roblox Instance` is `.Looped`
 ### Sound2:Pause()
 ```lua
 Sound2:Pause() => void
 ```
-Pauses the current object if playing. Can only be resumed by `Sound2:Resume()`
+Pauses the current Instance if playing. Can only be resumed by `Sound2:Resume()`
 !!! warning
-    Using `:Play()` is used on a paused object will create a new `Roblox Sound Instance` Avoid using `:Play()` on paused objects!
+    Using `:Play()` is used on a paused Instance will create a new `Roblox Sound Instance` Avoid using `:Play()` on paused Instances!
 ### Sound2:Resume()
 ```lua
 Sound2:Resume() => void
 ```
-Resumes the `Sound2` Object if paused.
+Resumes the `Sound2` Instance if paused.
 ### Sound2:Stop()
 ```lua
 Sound2:Stop() => void
 ```
-Stops the current `Sound2` Object if playing.
+Stops the current `Sound2` Instance if playing.
 ### Sound2:SetCallback()
 ```lua
 Sound2:SetCallback(EventName : string, Callback : () => void) => void
@@ -58,4 +58,4 @@ Unbinds the event from a function.
 ```lua
 Sound2:AdjustVolume(NewVolume : number) => void
 ```
-Sets the `Sound2 Object`'s volume. Respects current `Sound2.VolumeChangeType`
+Sets the `Sound2 Instance`'s volume. Respects current `Sound2.VolumeChangeType`
