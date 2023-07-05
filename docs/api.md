@@ -1,4 +1,13 @@
 ## Types
+### Sound2Config
+```lua
+type Sound2Config = {
+	LoadingTimeout: number?,
+	SoundRemovalDelay: number?,
+	ParentObject: Instance?,
+	SoundsDictionary: { [string]: string }?
+}
+```
 ### Sound2Properties
 ```lua
 type Sound2Properties = {
@@ -45,12 +54,12 @@ Sound2.new(ObjectProps : Sound2Properties, RobloxProps : SoundProperties) => Sou
 Constructs the Sound2 Instance.
 ### Sound2.GetGlobalConfig()
 ```lua
-Sound2.GetGlobalConfig() => {} : GlobalConfig
+Sound2.GetGlobalConfig() => {} : Sound2Config
 ```
 Returns a copy of the current global config.
 ### Sound2.SetGlobalConfig()
 ```lua
-Sound2.SetGlobalConfig(Config : GlobalConfig) => void
+Sound2.SetGlobalConfig(Config : Sound2Config) => void
 ```
 Sets the current global config.
 !!! note
