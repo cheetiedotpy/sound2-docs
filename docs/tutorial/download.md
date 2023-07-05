@@ -9,7 +9,7 @@ Sound2 is a single module script without any dependencies, so you basically have
 ## Option #2: Wally + Rojo
 If you are using Rojo and Wally you can install it as a dependency by using this line:
 
-`Sound2 = "cheetiedotpy/sound2@1.0.0"`
+`sound2 = "cheetiedotpy/sound2@0.1.0"`
 
 After saving the file, run the install command:
 
