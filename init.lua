@@ -45,7 +45,7 @@ type Sound2 = {
 	MutedVolume: number?,
 	Parent: Instance?,
 
-	Play: (self: Sound2) -> nil;
+	Play: (self: Sound2, WaitForLoading: boolean?) -> nil;
 	Pause: (self: Sound2) -> nil;
 	Resume: (self: Sound2) -> nil;
 	Stop: (self: Sound2) -> nil;
@@ -127,7 +127,7 @@ function Sound2:Constructor(Sound2Props: Sound2Properties?, SoundProps: SoundPro
 	self.Callbacks = {}
 end
 
-function Sound2:Play()
+function Sound2:Play(WaitForLoading: boolean)
 	local NewSound = Instance.new("Sound") do
 		NewSound.Name = self.SoundId
 		NewSound.SoundId = GlobalConfig.SoundsDictionary and GlobalConfig.SoundsDictionary[self.SoundId] or self.SoundId
@@ -144,7 +144,7 @@ function Sound2:Play()
 	end
 
 	local IsLoaded
-	if not NewSound.IsLoaded then
+	if not NewSound.IsLoaded and WaitForLoading then
 		task.delay(GlobalConfig.LoadingTimeout, function()
 			if IsLoaded then
 				return
@@ -156,6 +156,8 @@ function Sound2:Play()
 
 		NewSound.Loaded:Wait()
 		IsLoaded = true
+	elseif NewSound.IsLoaded then
+		warn("Dropping sound request for "..self.SoundId.." (Not loaded)")
 	end
 
 	if not NewSound then

@@ -71,7 +71,7 @@ Sound2.GetAllPlayingSounds() => {Sound2}
 Returns a table with all the currently playing `Sound2` Instances.
 ### Sound2:Play()
 ```lua
-Sound2:Play() => void
+Sound2:Play(WaitForLoading : boolean?) => void
 ```
 Plays the current `Sound2` Instance. Will not stop automatically if `Roblox Instance` is `.Looped`
 ### Sound2:Pause()
