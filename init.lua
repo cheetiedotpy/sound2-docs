@@ -156,7 +156,7 @@ function Sound2:Play(WaitForLoading: boolean)
 
 		NewSound.Loaded:Wait()
 		IsLoaded = true
-	elseif NewSound.IsLoaded then
+	elseif not NewSound.IsLoaded then
 		warn("Dropping sound request for "..self.SoundId.." (Not loaded)")
 	end
 
